@@ -1,12 +1,40 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>insert page title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>전송버튼을 그림으로 사용하고 싶다</title>
+<link rel="stylesheet" href="../../common/css/style-nuage.css">
 </head>
 <body>
-    
+<header>
+	<div class="header-container">
+		<h1>Nuage</h1>
+	</div>
+</header>
+<div class="contents">
+	<div class="contents-container">
+	<!-- サンプル ここから -->
+        <form action="#" method="POST">
+            <p><strong>새로운 정보 신청하기</strong></p>
+            <p>
+                <label for="mail">전자우편 주소</label>
+                <input type="email" name="mail" id="mail">
+            </p>
+            <p>
+                <!-- submit 버튼인데 우리가 지정한 이미지가 입혀진 submit 버튼 -->
+                <!-- 전송 버튼을 이미지로 사용하면 이미지로 인해서 트래픽이 증가함 / 사용을 지양해야함 -->
+                <!-- 이미지 버튼을 사용하게되면 눌렀을 때도 우리가 직접 구현해야함 -->
+                <input type="image" src="images/button.png" alt="신청하기">
+            </p>
+        </form>
+	<!-- サンプル ここまで -->
+	</div>
+</div>
+<footer>
+	<div class="footer-container">
+		<p>©nuage</p>
+	</div>
+</footer>
 </body>
 </html>
