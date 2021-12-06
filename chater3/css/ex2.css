@@ -1,0 +1,29 @@
+
+table {
+    /* chater9-표스타일
+    border-collapse : 테두리 통합, 분리
+    collapse(통합), separate(분리-기본값) */
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 8px 20px;
+    border: 1px solid #b7b7b7;
+}
+
+td:nth-child(4), td:nth-child(6) {
+    /* td:nth-child(4) : 자식인 td 중 4번째 td를 고르기 */
+    /* nth-child(n) : n번째 요소를 선택하는 선택자 */
+    text-align: right;
+}
+
+thead {
+    background: #2c8daa;
+    color: #fff;
+}
+
+tr:hover {
+    /* chater12-가상선택자 */
+    cursor: default;
+    background: #ecfafc;
+}

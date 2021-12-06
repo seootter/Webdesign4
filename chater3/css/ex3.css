@@ -1,0 +1,34 @@
+
+table {
+    /* chater9-표스타일
+    border-collapse : 테두리 통합, 분리
+    collapse(통합), separate(분리-기본값) */
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 8px 20px;
+    border: 1px solid #b7b7b7;
+}
+
+td:nth-child(4), td:nth-child(6) {
+    /* td:nth-child(4) : 자식인 td 중 4번째 td를 고르기 */
+    /* nth-child(n) : n번째 요소를 선택하는 선택자 */
+    text-align: right;
+}
+
+thead {
+    background: #2c8daa;
+    color: #fff;
+}
+
+/* nth-child(n+숫자) : 해당 숫자를 포함한 그 이후 태그를 선택하는 선택자 */
+/*  */
+th:nth-child(n+4), td:nth-child(n+4) {
+    /* chater6-텍스트스타일
+    white-space : 줄바꿈을 제어하는 속성
+    (줄바꿈 뿐 아니라 띄어쓰기, 탭 등도 어떻게 표시할지 핸들링)
+    normal(여러 개의 공백을 하나로 표시),
+    nowrap(여러 개의 공백을 하나로 표시, 영역 너비를 넘어가는 내용은 줄바꾸지 않고 계속 한 줄로 표시) */
+    white-space: nowrap;
+}
