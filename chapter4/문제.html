@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>문제</title>
+<link rel="stylesheet" href="../../common/css/style-auberge.css">
+<link rel="stylesheet" href="css/ex5.css">
+</head>
+<body>
+<header>
+	<div class="header-container">
+		<h1>문제</h1>
+	</div>
+</header>
+<div class="contents">
+	<div class="contents-container">
+	<!-- サンプル ここから -->
+        <h1>문의</h1>
+        <form action="#" method="POST">
+            <p>
+                <label for="realname">이름</label>
+                <br>
+                <input type="text" name="realname" id="realname" required>
+            </p>
+            <p>
+                <label for="mail">전자우편</label>
+                <br>
+                <input type="email" name="mail" id="mail" required>
+            </p>
+            <p>
+                <label for="phone">전화번호</label>
+                <br>
+                <input type="tel" name="phone" id="phone">
+            </p>
+            <p>
+                <label for="message">문의할 내용</label>
+                <br>
+                <textarea name="message" id="message"></textarea>
+            </p>
+            <p><input type="submit" value="문의하기" id="submit"></p>
+        </form>
+	<!-- サンプル ここまで -->
+	</div>
+</div>
+<footer>
+	<div class="footer-container">
+		<p>©auberge</p>
+	</div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+
+
+    $("#submit").on("click", function() {
+        // javascript나 jquery를 사용해서 적용한 css 를 없애고 싶을 땐
+        // css 속성 값을 ""(빈문자열)로 지정해주면 됨
+        $("#realname").css("background", "");
+        $("#mail").css("background", "");
+
+        // 입력 항목을 올바르게 입력했다 안했다를 체크할 부분을
+        // css에서 :invalid, :valid 선택자를 사용해서 구현했기 때문에
+        // 자바스크립트로 판단 할 필요가 없음
+    });
+
+    </script>
+</body>
+</html>

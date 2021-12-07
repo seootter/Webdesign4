@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>레이블과 텍스트 필드를 옆으로 나란히 정렬시키고 싶다</title>
+<link rel="stylesheet" href="../../common/css/style-auberge.css">
+<link rel="stylesheet" href="css/ex6.css">
+</head>
+<body>
+<header>
+	<div class="header-container">
+		<h1>auberge</h1>
+	</div>
+</header>
+<div class="contents">
+	<div class="contents-container">
+	<!-- サンプル ここから -->
+        <h1>문의</h1>
+        <form action="#" method="POST">
+            <p>
+                <label for="realname" class="textfield_label">이름</label>
+                <input type="text" id="realname" name="realname">
+            </p>
+            <p>
+                <label for="mail" class="textfield_label">전자우편</label>
+                <input type="email" id="mail" name="mail"> 
+            </p>
+            <p>
+                <label for="phone" class="textfield_label">전화번호</label>
+                <input type="tel" id="phone" name="phone"> 
+            </p>
+            <p>
+                <label for="message" class="textfield_label">문의할 내용</label>
+                <textarea name="message" id="message"></textarea>
+            </p>
+            <p>
+                <input type="submit" value="전송">
+            </p>
+        </form>
+	<!-- サンプル ここまで -->
+	</div>
+</div>
+<footer>
+	<div class="footer-container">
+		<p>©auberge</p>
+	</div>
+</footer>
+</body>
+</html>
