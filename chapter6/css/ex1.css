@@ -1,0 +1,40 @@
+/* nav 나 ul 등 태그에 width값을 주지 않았기 때문에
+   화면의 너비에 맞게 늘어나고 줄어드는 반응형페이지가 됨
+ */ 
+/* 일반적으로 스마트폰의 기기 너비가 많이 차이나지 않기 때문에 스마트폰용 내비게이션은 width를 주지않음 */
+
+body {
+    margin: 0;
+}
+
+nav {
+    border-top: 8px solid #34589e;
+    background: #2a6fb7;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    /* li 태그의 기본 특성을 사용해서 내비게이션을 세로로 배치함  */
+    border-bottom: 1px solid #34589e;
+}
+
+nav li a {
+    /* a 태그를 block 레벨로 만들어서 너비와 패딩이 적용되도록 함 */
+    display: block;
+    width: 100%;
+    /* 내비게이션을 늘이거나 줄이고 싶을 때는 padding을 사용해서 조절함 */
+    padding: 20px 0;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+}
+
+nav li a:hover {
+    background: #34589e;
+}

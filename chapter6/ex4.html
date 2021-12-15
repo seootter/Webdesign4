@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>특정 글로벌 내비게이션 항목을 강조하고 싶다</title>
+    <link rel="stylesheet" href="css/ex4.css">
+</head>
+<body>
+    <!-- URL 패턴 -->
+    <!-- 1. http://www.naver.com > 지정된 주소로 이동 해라 -->
+    <!-- 2. / → 현재 도메인으로 이동을 해라 -->
+    <!-- 3. /index.html → 현재 도메인에서 index.html 경로로 이동을 해라 -->
+    <!-- 4. /chapter1/index.html → 현재 도메인에서 chapter1 경로 안에 있는 index.html 로 이동을 해라 -->
+    <!-- 5. /chapter1/chapter2/index.html → 현재 도메인에서 chapter1 경로 안에 있는 chapter2 경로 안에 있는  index.html 로 이동을 해라  -->
+    <!-- 6. ?파라미터이름=값 → 현재 페이지로 이동하는데 파라미터와 값을 가지고 현재 페이지로 이동을 해라
+        (현재 페이지로 되돌아오는데 파라미터와 값을 가지고 돌아오는거임) -->
+    <nav>
+        <ul>
+            <li><a href="?current=home">HOME</a></li>
+            <li><a href="?current=intro" class="current">회사개요</a></li>
+            <li><a href="?current=portfolio">업무내용</a></li>
+            <li><a href="?current=connection">접속하기</a></li>
+            <li><a href="?current=how">문의하기</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
