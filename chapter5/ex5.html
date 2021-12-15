@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>insert page title</title>
+    <style>
+        body {
+            background: #3d5a80;
+            height: 1000px;
+        }
+        .circle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: #ee6c4d;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="circle"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        // option 태그는 click 이벤트가 동작하지 않음
+        // html, body 태그도 mouseon 이벤트가 동작하지 않음
+        // 몇 몇 태그들은 몇 몇 이벤트를 잡을 수가 없음
+
+        // $("body").on("mouseover", function() {
+        //     alert("마우스가 페이지 안으로 들어옴");
+        // });
+
+        // $("body").on("mouseout", function() {
+        //     alert("마우스가 페이지 바깥으로 나감");
+        // });
+        $("body").on("mousemove", function(e){
+            // 현재 마우스의 x 좌표
+            let mouseX = e.clientX - 75;
+            // 현재 마우스의 y 좌표
+            let mouseY = e.clientY - 75;
+
+            $(".circle").css("top", mouseY + "px");
+            $(".circle").css("left", mouseX + "px");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+bluetooth
+ - Ver: 3.0
+ - Frequency : 2.40 ~ 2.48 GHz
+ - Range : 10M
+ - Profile : HFP, A2DP, AVRCP
+
+Audio
+ - RMS : 25W ( 2*5W + 15W )
+ - Frequency response : 35Hz ~ 18KHz
+ - S/N ratio : >= 65 dB
+ - Distortion : <= 1%
+ - RATED IMP : 4 OHM
+
+Adjustment : Power On/Off, Volume, Play.Pause, Bass Treble
+
+Music File Format : MP3
+
+Input Device Type : Bluetooth, AUX, USB
+
+Power Type : AC 220V, 60Hz, 25W
+
+Size : 254 X 144 X 144 mm
+Net weight : 2.6Kg / 3.6Kg

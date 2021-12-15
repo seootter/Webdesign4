@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>텍스트를 캡슐 모양으로 둘러싸고 싶다</title>
+<link rel="stylesheet" href="../../common/css/style-nuage.css">
+<link rel="stylesheet" href="css/ex4.css">
+<style>
+	.description {
+		position: absolute;
+		width: 300px;
+		background: white;
+		border: 1px solid black;
+		display: none;
+	}
+
+	.outter_wrapper {
+		display: inline-block;
+	}
+	.inner_wrapper {
+		position: relative;
+	}
+	#saurischia_desc {
+		top: -2px;
+		left: 83px;
+	}
+
+	#ornithischia_desc {
+		top: -2px;
+		left: -297px;
+	}
+</style>
+</head>
+<body>
+<header>
+	<div class="header-container">
+		<h1>Nuage</h1>
+	</div>
+</header>
+<div class="contents">
+	<div class="contents-container">
+	<!-- サンプル ここから -->
+
+        <div>
+			티라노 사우루스와 같은 타입의 공룡은
+			
+			<div class="outter_wrapper">
+				<div class="inner_wrapper">
+					<span id="saurischia">용반목</span>
+					<div id="saurischia_desc" class="description">
+						용반류는 트라이아스 말기에 분화한 조반목과 골반의 모습으로 구분된다.<br>
+						용각류는 도마뱀과 유사하게 장골, 치골, 좌골이 세 방향을 나타내고 있으며,<br>
+						좌골에서 치골이 앞으로 향하는 것으로 식별된다.
+					</div>
+				</div>
+			</div>
+		
+			이고,
+            트리케라톱스와 같은 타입의 공룡은
+			
+			<div class="outter_wrapper">
+				<div class="inner_wrapper">
+					<span id="ornithischia">조반목</span>입니다.
+					<div id="ornithischia_desc" class="description">
+						조반목은 공룡의 분류이다. 조반목은 골반의 형태가 새와 닮았다고 해서 용반목과 구분 하기 위해 붙은 이름이지만,<br>
+						실제 새의 조상은 조반류가 아닌 용반목이다.<br>
+						전부 초식공룡으로 이루어져 있지만, 백악기의 용반목 중 일부가 초식공룡으로 진화했기 때문에<br>
+						모든 초식공룡이 속해있는것은 아니다.
+					</div>
+				</div>
+
+			</div>
+			
+            두 타입은 육식이나 초식으로 분류하지 않고 골반 뼈의 형태로 분류합니다.
+        </div>
+
+	<!-- サンプル ここまで -->
+	</div>
+</div>
+<footer>
+	<div class="footer-container">
+		<p>©nuage</p>
+	</div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+	$("#saurischia").on("mouseenter", function(e) {
+		showDescription("saurischia", e);
+	});
+
+	$("#ornithischia").on("mouseover", function(e) {
+		showDescription("ornithischia", e);
+	});
+
+	function showDescription(type, e) {
+		$("#" + type + "_desc").css("display", "block");
+	}
+
+	$("span").on("mouseleave", function() {
+		$(".description").css("display", "none");
+	});
+</script>
+</body>
+</html>
+

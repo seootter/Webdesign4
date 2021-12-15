@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>페이지네이션을 작성하고 싶다</title>
+    <link rel="stylesheet" href="css/ex15.css">
+    <style>
+        .pagination li:first-child {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <!-- 페이지네이션의 기능을 자바스크립트로 구현했기 때문에 페이지 이동 없이
+         하나의 페이지에서 동작을 함 -->
+
+    <!-- SPA(single-page Application) : 페이지 이동 없이 하나의 페이지에서 동적으로 기능들이 동작하는 페이지  -->
+
+    <ol class="pagination">
+        <li><a class="prev" href="#" prev="0"> &lt; </a></li>
+        <li class="current"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a class="next" href="#" next="6"> &gt; </a></li>
+    </ol>    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(".pagination a").on("click", function() {
+
+            $(".current").removeClass("current");
+
+            let $clickedATag = $(this);
+
+            let $liTag = $clickedATag.parent();
+
+            $liTag.addClass("current");
+        });
+
+        $(".pagination .next").off("click");
+
+        $(".pagination .next").on("click", function() {
+            let next = $(this).attr("next");
+
+            next = parseInt(next);
+
+            for(let i=0; i<=4; i++) {
+                let nthChild = 2 + i;
+
+                $(".pagination li:nth-child(" + nthChild + ") a").text(next + i);
+            }
+
+            $(".current").removeClass("current");
+            $("li:nth-child(2)").addClass("current");
+
+            $(this).attr("next", next + 5);
+            $(".pagination .prev").attr("prev", next - 1);
+
+            $(".pagination li:first-child").css("visibility", "visible");
+
+            if(next == 46) {
+                $(".pagination li:last-child").css("visibility", "hidden");                
+            }
+        });
+
+        $(".pagination .prev").on("click", function() {
+            let prev = $(this).attr("prev");
+            
+            if(prev == 5) {
+                $(".pagination li:first-child").css("visibility", "hidden");                
+            }
+
+            $(".pagination li:last-child").css("visibility", "visible"); 
+
+            prev = parseInt(prev);
+
+            for(let i=0; i<=4; i++) {
+                let nthChild = 6 - i;
+
+                $(".pagination li:nth-child(" + nthChild + ") a").text(prev - i);
+            }
+
+            $(".current").removeClass("current");
+            $("li:nth-child(6)").addClass("current");
+
+            $(this).attr("prev", prev - 5);
+            $(".pagination .next").attr("next", prev + 1);
+        });
+    </script>
+</body>
+</html>

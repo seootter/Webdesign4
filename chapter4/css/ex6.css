@@ -14,7 +14,7 @@ textarea {
     height: 160px;
     font-family: sans-serif;
     font-size: 16px;
-    /* textarea 사이즈를 조절 할 수 없게 css 설정 */
+    /* 일반적으로 textarea는 사이즈를 임의로 조절 없게 아래의 속성이 항상 추가 됨 */
     resize: none;
 }
 
@@ -23,9 +23,3 @@ textarea {
     width: 7em;
 }
 
-input[type="submit"] {
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    background: #fff;
-    padding: 6px 15px;
-}

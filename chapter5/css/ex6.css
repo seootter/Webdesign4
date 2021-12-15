@@ -4,6 +4,6 @@ body {
 
 strong {
     font-weight: normal;
-    /* transparent : 투명색 */
+    /* transparent -> 투명색 */
     background: linear-gradient(transparent 55%, #fafa00 55%, #fafa00 100%);
 }

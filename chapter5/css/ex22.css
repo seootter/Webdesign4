@@ -1,0 +1,57 @@
+.calender-wrapper {
+    width: 400px;
+}
+
+.calender {
+    /*  table-layout : fixed : 테이블의 셀 너비를 고정 */
+    /*  (셀 안에 영문 텍스트가 들어가면 영문 텍스트를 그대로 쭉
+        이어서 출력 따라서 영문 텍스트가 들어가면 테이블 너비가 의도했던 너비와 달라짐 - 이런 부분 방지) */
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #cdcdcd;
+}
+
+.calender th, .calender td {
+    padding: 10px 0;
+    border: 1px solid #cdcdcd;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+.calender th {
+    background-color: #dedede;
+}
+
+.calender th:first-child {
+    background-color: #e05557;
+    color: #fff;
+}
+
+.calender th:last-child {
+    background-color: #207bcf;
+    color: #fff;
+}
+
+.calender td:last-child {
+    color: #207bcf;
+}
+
+.holiday {
+    color: #e05557;
+}
+
+.calender caption {
+    margin: 0 0 10px 0;
+    padding: 10px;
+    font-size: 14px;
+    border: 5px solid #dedede;
+    font-weight: bold;
+}
+
+.birhday {
+    background-color: #eadff2;
+    color: #9979c1;
+    font-weight: bold;
+}

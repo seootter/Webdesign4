@@ -20,8 +20,11 @@ textarea {
     padding: 10px;
 }
 
-/* focus 선택자로 태그를 선택해서 디자인을 적용할 때는 해당 태그의 border 속성이 지정되어 있어야 함 */
-/* 브라우저에 따라서는 focus 상태일 때 브라우저 자체 css가 적용될 수 있음 */
+/* focus 선택자로 태그를 선택해서 디자인을 적용할 때는 해당 태그에 border속성이 지정되어있어야 함 */
+/* 브라우저에 따라서는 focus 상태일 때 브라우저 자체 CSS가 적용될 수 있음 */
 input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, textarea:focus {
     background: #faf4e2;
 }
+
+
+

@@ -1,0 +1,52 @@
+.articles {
+    width: 400px;
+}
+
+.articles ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.articles li {
+    overflow: hidden;
+    padding: 10px;
+    margin-bottom: 20px;
+    background: #e9e2de;
+}
+
+.articles .thumbnail {
+    /* float 속성을 사용해서 이미지는 왼쪽에 글들은 이미지를 감싸도록 레이아웃을 구성 */
+    float: left;
+    margin-right: 10px;
+    font-size: 0;
+    position: relative;
+}
+
+.articles .category {
+    margin: 0 0 5px 0;
+    font-size: 12px;
+    font-weight: bold;
+    color: #dd3a59;
+}
+
+.articles .title {
+    margin: 0;
+    font-size: 14px;
+}
+
+.articles .title a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.articles .title a:hover {
+    color: #717171;
+}
+
+.new {
+    /* absolute 속성은 이 태그가 붙으려는 위치에 있는 부모 태그에 relative 속성이 적용되어있어야함 */
+    position: absolute;
+    left: 0;
+    top: 0;
+}

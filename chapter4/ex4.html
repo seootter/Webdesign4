@@ -10,36 +10,36 @@
 <body>
 <header>
 	<div class="header-container">
-		<h1>입력 내용을 체크해서 텍스트 필드에 표시하고 싶다</h1>
+		<h1>auberge</h1>
 	</div>
 </header>
 <div class="contents">
 	<div class="contents-container">
 	<!-- サンプル ここから -->
-        <h1>문의</h1>
-        <form action="#" method="POST">
-            <p>
-                <label for="realname">이름</label>
-                <br>
-                <input type="text" name="realname" id="realname" required>
-            </p>
-            <p>
-                <label for="mail">전자우편</label>
-                <br>
-                <input type="email" name="mail" id="mail" required>
-            </p>
-            <p>
-                <label for="phone">전화번호</label>
-                <br>
-                <input type="tel" name="phone" id="phone">
-            </p>
-            <p>
-                <label for="message">문의할 내용</label>
-                <br>
-                <textarea name="message" id="message"></textarea>
-            </p>
-            <p><input type="submit" value="문의하기"></p>
-        </form>
+    <h1>문의</h1>
+    <form action="#" method="POST">
+        <p>
+            <label for="realname">이름</label>
+            <br>
+            <input type="text" name="realname" id="realname" required>
+        </p>
+        <p>
+            <label for="mail">전자우편</label>
+            <br>
+            <input type="email" name="mail" id="mail" required>
+        </p>
+        <p>
+            <label for="phone">전화번호</label>
+            <br>
+            <input type="tel" name="phone" id="phone">
+        </p>
+        <p>
+            <label for="message">문의할 내용</label>
+            <br>
+            <textarea name="message" id="message"></textarea>
+        </p>
+        <p> <input type="submit" id="submit" value="문의하기"> </p>
+    </form>
 	<!-- サンプル ここまで -->
 	</div>
 </div>
@@ -48,5 +48,23 @@
 		<p>©auberge</p>
 	</div>
 </footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+    $("#realname").css("background", "transparent");
+    $("#mail").css("background", "transparent");
+
+    // [문의하기] 버튼을 클릭했을 때
+    $("#submit").on("click", function() {
+        // javascript나 jquery를 사용해서 적용한 CSS를 없애고 싶을 때는
+        // 아래와 같이 CSS 속성의 값을 "" (빈문자열) 로 지정해주면 됨
+        $("#realname").css("background", "");
+        $("#mail").css("background", "");
+
+        // 자바스크립트로 입력 항목을 올바르게 입력했다 안했다를 체크할 부분을
+        // 우리가 CSS의 :invalid, :valid 선택자를 사용해서
+        // 구현했기 때문에 자바스크립트로 판단을 할 필요가 없음
+    });
+</script>
 </body>
 </html>

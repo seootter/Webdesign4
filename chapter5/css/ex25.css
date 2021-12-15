@@ -1,0 +1,24 @@
+select {
+    /* 아직 개발중인 비표준 css3 속성 */
+    /* 비표준 속성들은 브라우저접두사를 붙임
+       이 속성은 select 태그에만 사용하는게 좋음 */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    margin-top: 10px;
+    border: 2px solid #b6b6b6;
+    padding: 5px 50px 5px 29px;
+    border-radius: 5px;
+    font-size: 16px;
+    background: url("../images/arrow1.png") right 10px center no-repeat;
+}
+
+input[type="submit"] {
+    border: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+    background: #2ca9b4;
+    font-size: 14px;
+    color: #fff;
+}

@@ -1,6 +1,6 @@
 #login_form {
     margin: 3em auto;
-    border: 2px solid #3754AB;
+    border: 3px solid #4267ab;
     width: 320px;
     border-radius: 8px;
 }
@@ -10,7 +10,7 @@
     padding: 8px 0;
     font-size: 1em;
     text-align: center;
-    background: #3754AB;
+    background: #4267ab;
     color: #fff;
 }
 
@@ -21,22 +21,21 @@
 input[type="email"], input[type="password"] {
     padding: 6px;
     font-size: 16px;
-    border: 1px solid #C1C6D6;
 }
 
 input[type="submit"] {
     padding: 6px 20px;
-    border: 2px solid #CBC5E3;
+    border: 4px solid #ffd368;
     border-radius: 10px;
-    background: #E0D9FA;
+    background: #ff753e;
     font-size: 20px;
     color: #ffffff;
 }
 
 input[type="submit"]:hover {
-    background: #CBC5E3;
+    background: #ffd386;
 }
 
 input[type="submit"]:active {
-    background: #E0D9FA;
+    background: #ff753e;
 }

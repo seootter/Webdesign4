@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>링크가 다른창에 표시될 경우 아이콘을 표시하고 싶다</title>
+<title>PDF등 특정 파일의 링크를 아이콘이나 배경으로 표시하고 싶다</title>
 <link rel="stylesheet" href="../../common/css/style-nuage.css">
 <link rel="stylesheet" href="css/ex3.css">
 </head>
@@ -18,10 +18,10 @@
 	<!-- サンプル ここから -->
         <h1>전망이 뛰어난 서울의 관광 명소</h1>
         <ul>
-            <li>서울 타워 <br>
+            <li>서울 타워<br>
             <a href="tour1.html">당사 추천 서울 관광</a> / <a href="tour1.pdf">투어 팜플렛</a>
             </li>
-            <li>서울 스카이 <br>
+            <li>서울 스카이<br>
             <a href="tour2.html">당사 추천 서울 관광</a> / <a href="tour2.pdf">투어 팜플렛</a>
             </li>
         </ul>
@@ -34,21 +34,23 @@
 	</div>
 </footer>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script>
-        let $a = $("a");
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+    // 우리가 원하는 태그 -> a 태그 중에서 href 속성을 갖고 있고
+    //                      href 속성이 .pdf로 끝나는 a 태그
 
-        for(let i=0; i<$a.length; i++) {
-            let $nthA = $a.get(i);
-
-            if($nthA == "[href=\"tour1.pdf\"]" || $nthA == "[href=\"tour2.pdf\"]") {
-                pdf.css("paddibg", "8px 20px");
-                pdf.css("border", "1px solid #1396c0");
-                pdf.css("border-radius", "3px");
-                pdf.css("background-color", "#e0f4ff");
-                pdf.css("text-decoration", "none");
-            }
+    let $aTags = $("a");
+    for(let i=0; i<$aTags.length; i++) {
+        let $nthATag = $aTags.get(i);
+        
+        if($nthATag가 href속성을 갖고 있다 && $nthATag의 href 속성이 .pdf로 끝난다) {
+            $nthATag.css("padding", "8px 20px");
+            $nthATag.css("border", "1px solid #1396c0");
+            $nthATag.css("border-radius", "3px");
+            $nthATag.css("background-color", "#e0f4ff");
+            $nthATag.css("text-decoration", "none");
         }
-    </script>
+    }
+</script>
 </body>
 </html>
