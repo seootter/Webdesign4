@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+}
+
+nav {
+    background: #000;
+    border-bottom: 5px solid #37a29b;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 20px 10px 0 10px;
+}
+
+/* 플렉스 박스를 사용하면 플렉스 아이템 배치, 정렬이 편리하고*/
+/* 플렉스 컨테이너의 크기에 맞춰 플렉스 아이템들을 확대, 축소 할 수 있음 */
+/* flex 기본 값 : flex 0 1 auto */
+/* 플렉스 컨테이너의 크기에 맞춰 확대하지 않고 축소만 함 / 
+   확대/축소 하기 전 기준 치수는 컨텐츠에 맞는 너비로 함) */
+/* 플렉스 아이템은 flex 속성의 세번째 값을 기준으로 부모 요소의 너비에 맞춰 늘어나거나 줄어듬 */
+/* 플렉스 아이템들의 기준 치수 합 보다 플렉스 컨테이너가 넓을 경우 각각의 플렉스 아이템은 */
+/* '확대 비율'의 기준으로 옆으로 뻗어 나감(너비가 넓어짐)  */
+/* 플렉스 속성을 기본값으로 사용하면 플렉스 컨테이너에 공간이 남아있어도 넓어지지않음 */
+nav li {
+    flex: 1 0 auto;
+}
+
+nav li:first-child, nav li:last-child {
+    flex: 2 0 auto;
+}
+
+
+nav li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px; 
+    color: #fff;
+}
+
+nav li a:hover {
+    background: #37a29b;
+    border-radius: 10px 10px 0 0;
+}

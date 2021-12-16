@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>특정 글로벌 내비게이션 항목을 강조하고 싶다</title>
+    <title>접속한 페이지의 내비게이션 링크를 강조하고 싶다</title>
     <link rel="stylesheet" href="css/ex4.css">
 </head>
 <body>
@@ -25,5 +25,27 @@
             <li><a href="?current=how">문의하기</a></li>
         </ul>
     </nav>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+            $(".current").removeClass("current");
+
+            let parameters = location.search;
+            prarameters = parameters.substring(1, parameters.length);
+            prarameters = prarameters.split("=");
+
+            if(prarameters[1] == "home") {
+                $("ul li:nth-child(1) a").addClass("current");
+            } else if (prarameters[1] == "intro") {
+                $("ul li:nth-child(2) a").addClass("current");
+            } else if (prarameters[1] == "portfolio") {
+                $("ul li:nth-child(3) a").addClass("current");
+            } else if (prarameters[1] == "connection") {
+                $("ul li:nth-child(4) a").addClass("current");
+            } else if (prarameters[1] == "how") {
+                $("ul li:nth-child(5) a").addClass("current");
+            } 
+
+    </script>
 </body>
 </html>
