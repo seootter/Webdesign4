@@ -80,12 +80,19 @@
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script>
 		$(window).on("scroll", function() {
-			let window = $(this);
+			let currentScrollTop = $(this).scrollTop();
 
-			let middlePoint = scroll.sc / 2;
+			// window.innerHeight : 페이지의 높이
+			// $(window).innerHeight(); : 페이지의 높이
+			let scrollMiddle = window.innerHeight / 2;
 
-			if(scroll )
-			$(".campaign").show(3000);
+			if(currentScrollTop >= scrollMiddle) {
+				$(".campaign").stop().slideDown();
+
+				setTimeout(function() {
+					$(".campaign").slideUp();
+				}, 3000);
+			}
 		});
 	</script>
 </body>

@@ -9,6 +9,7 @@ body {
 	font-family: sans-serif;
 	font-size: 16px;
 }
+
 /* 헤더 */
 header {
 	background: #000000;
@@ -24,6 +25,7 @@ header {
 	background-size: 200px 44px;
 	text-indent: -9999px;
 }
+
 /* 내비게이션 */
 nav {
 	background: #000000;
@@ -54,6 +56,7 @@ nav {
 	border-bottom: 8px solid #7bae34;
 	color: #7bae34;
 }
+
 /* 바닥글 */
 footer { }
 .footer-container {
@@ -73,6 +76,7 @@ footer address {
 	font-size: 0.8rem;
 	color: #ffffff;	
 }
+
 /* 메인 콘텐츠 레이아웃 부분 */
 main { }
 .main-container {
