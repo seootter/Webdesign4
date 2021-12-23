@@ -66,13 +66,15 @@ footer { }
 	font-size: 0.8rem;
 	color: #ffffff;
 }
-/* 메인 콘텐츠 ㄹ이아웃 부분 */
+/* 메인 콘텐츠 레이아웃 부분 */
 main { }
 .main-container {
 	padding: 0 0 40px 0;
 	background: #ffffff;
 }
 /* 공지사항 부분 */
+/* 플렉스 박스는 flex-flow에 사용한 두 번째 값(또는 flex-wrap) 때문에 한 줄에 몇 개씩 보여줄 지 고민안해도됨 */
+/* flex-flow : row wrap > 플렉스 아이템들을 여러 줄 걸쳐서 한 줄에 나열하도록 지정 */
 .news {
 	margin: 0 20px;
 }
@@ -94,6 +96,8 @@ main { }
 	margin-bottom: 10px;
 	border: 1px solid #dadada;
 }
+/* :empty 가상 선택자 : 내용이 없는 빈 요소를 선택하는 선택자
+   해당 태그 내 텍스트와 자식 태그가 없을 경우*/
 .news-contents li:empty {
 	border: none;
 }

@@ -74,6 +74,10 @@ main { }
 	background: #ffffff;
 }
 /* お知らせ部分 */
+/* 여러 개의 박스를 여러 줄에 나란히 배치 */
+/* 이럴 떄 먼저 생각해야하는 것, 한 줄에 몇 개의 박스를 나열할 것인가? */
+/* 한 줄에 5개 박스를 나열하기로 결정 */
+/* 한 줄에 5개의 박스를 나열 해야하므로 너비를 적절히 설정 */
 .news {
 	margin: 0 20px;
 }
@@ -90,10 +94,10 @@ main { }
 }
 .news-contents li {
 	float: left;
+	width: 19%;
 	border: 1px solid #dadada;
 	margin-right: 1.25%;
 	margin-bottom: 5px;
-	width: 19%;
 }
 .news-contents li:last-child {
 	margin-right: 0;
