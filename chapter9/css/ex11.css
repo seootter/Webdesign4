@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+}
+
+.outer ul {
+    padding: 70px 0;
+    overflow: hidden;
+    margin: 0;
+    list-style: none;
+}
+
+.outer li {
+    float: left;
+    box-sizing: border-box;
+    width: 20%;
+    padding: 8px;
+    font-size: 0;
+}
+
+.outer li img {
+    outline: 4px solid #dedede;
+    transition: all 0.3s cubic-bezier(.48, .01, .45, 1.5);
+    width: 100%;
+    height: auto;
+}
+
+.outer li a:hover img {
+    transform: rotate(14deg) scale(1.08);
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}   

@@ -1,0 +1,21 @@
+.news {
+    padding: 30px;
+    border: 2px solid #dddddd;
+    border-radius: 10px;
+}
+
+.news-title {
+    font-size: 20px;
+}
+
+.info {
+    margin: 1em 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* 구분선의 스타일이 단조로워 CSS를 적용할 때는 꼭 먼저 border: none 속성을 적용해야함 */
+hr {
+    border: none;
+    border-top: 1px dashed #f56500;
+}
