@@ -1,0 +1,24 @@
+
+.banner img {
+    border: 1px solid #c7c7c7;
+    /* 이 태그에 적용할 애니메이션 이름 */
+    animation-name: change_color;
+    /* 애니메이션 적용 시간 */
+    animation-duration: 3s;
+    /* 애니메이션 적용 속도 곡선 */
+    animation-timing-function: linear;
+    /* 애니메이션 방향 (정방향/역방향) */
+    animation-direction: alternate;
+    /* 애니메이션 반복횟수 (숫자, infinite) */
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes change_color {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(159deg);
+    }
+}
